@@ -1,7 +1,7 @@
 # Lista de Musicas em C
 
 
-![Tela do sistema](diogoregis.com.br/portifolio/img/Screenshot_6.png)
+![Tela do sistema](http:\\diogoregis.com.br/portifolio/img/Screenshot_6.png)
 
 
 Projetinho didático, onde podemos encontrar:
