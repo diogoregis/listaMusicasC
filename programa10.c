@@ -335,7 +335,11 @@ void salvarLista(ListaReproducao *lista) {
 }
 
 void ordenarPorTitulo(ListaReproducao *lista) {
-    if (lista->inicio == NULL) return;
+    if (lista->inicio == NULL){
+    	printf("Lista vazia\n");
+    	printf("\n");
+		return;
+	} 
 
     int trocado;
     do {
@@ -370,6 +374,8 @@ void ordenarPorTitulo(ListaReproducao *lista) {
             atual = atual->prox;
         } while (atual->prox != lista->inicio);
     } while (trocado);
+    
+    printf("LISTA ORGANIZADA - ALFABETICAMENTE\n");
 }
 
 void removerMusica(ListaReproducao *lista) {
