@@ -33,6 +33,7 @@ void tocarSequencial(ListaReproducao *lista);
 void tocarAleatorio(ListaReproducao *lista);
 void pesquisarMusica(ListaReproducao *lista);
 void exibirMenu(ListaReproducao *lista);
+void dadosMusica(ListaReproducao *lista);
 
 int main() {
     setlocale(LC_ALL, "");
@@ -69,17 +70,7 @@ void exibirMenu(ListaReproducao *lista) {
 
         switch (opcao) {
             case 1: {
-                char titulo[50], artista[50], album[50];
-                int minutos, segundos;
-                printf("Digite o título: ");
-                scanf(" %[^\n]%*c", titulo);
-                printf("Digite o artista: ");
-                scanf(" %[^\n]%*c", artista);
-                printf("Digite o álbum: ");
-                scanf(" %[^\n]%*c", album);
-                printf("Digite a duração (minutos e segundos): ");
-                scanf("%d %d", &minutos, &segundos);
-                adicionarMusica(lista, titulo, artista, album, minutos, segundos);
+                dadosMusica(lista);
                 break;
             }
             case 2:
@@ -431,5 +422,19 @@ void limparLista(ListaReproducao *lista) {
     } while (atual != lista->inicio);
 
     lista->inicio = NULL;
+}
+
+void dadosMusica(ListaReproducao *lista){
+	char titulo[50], artista[50], album[50];
+    int minutos, segundos;
+    printf("Digite o título: ");
+    scanf(" %[^\n]%*c", titulo);
+    printf("Digite o artista: ");
+    scanf(" %[^\n]%*c", artista);
+    printf("Digite o álbum: ");
+    scanf(" %[^\n]%*c", album);
+    printf("Digite a duração (minutos e segundos): ");
+    scanf("%d %d", &minutos, &segundos);
+    adicionarMusica(lista, titulo, artista, album, minutos, segundos);
 }
 
